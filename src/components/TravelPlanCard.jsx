@@ -23,8 +23,8 @@ function TravelPlanCard({ plan, onDelete, onFavorite, isFavorite }) {
         )}
         {plan.allInclusive && <span className="label all-inclusive">All Inclusive</span>}
         <div className="card-bottom-buttons">
-        <button onClick={() => onDelete(plan.id)} className="delete-button">Delete</button>
-        <button onClick={() => onFavorite(plan)} className={`favorite-button ${isFavorite ? 'is-favorite' : ''}`}>
+        <button type="button" onClick={() => onDelete(plan.id)} className="delete-button">Delete</button>
+        <button type="button" onClick={() => onFavorite(plan)} className={`favorite-button ${isFavorite ? 'is-favorite' : ''}`}>
           {isFavorite ? '♥' : '♡'}
         </button>
         </div>
